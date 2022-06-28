@@ -10,6 +10,7 @@ describe('Web form data entry test', () => {
       cy.get('[name="address"]').type(generatedData.address)
       cy.get('[name="phone"]').type(generatedData.phoneNo)
       cy.get('[type="submit"]').click()
+      //Enters data from the JSON into the fields of the webform and clicks the submit button.
       })
     })
   })

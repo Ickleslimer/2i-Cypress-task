@@ -4,5 +4,6 @@ describe('CSV to JSON conversion', () => {
     const filePath = '../downloads/generatedBy_react-csv.csv'
     cy.get('#fileupload').attachFile(filePath);
     cy.get('#download-link').click()
+    //Attaches a file to the dropbox on the website and clicks the download button to download the converted JSON.
   })
 })

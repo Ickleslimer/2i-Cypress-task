@@ -3,6 +3,7 @@ describe('Data generator test', () => {
     cy.visit('http://localhost:3000/')
 
     cy.get('#btn-resCSV-data').click()
+    //Resets the data in the CSV to prevent data spillover from previous projects
 
     cy.get('#select-key-drop-basic').select('First Name').should('have.value', 'firstName')
     cy.get('#btn-add-prop').click()
@@ -22,6 +23,7 @@ describe('Data generator test', () => {
 
     cy.get('#select-key-drop-basic').select('Phone No').should('have.value', 'phoneNo')
     cy.get('#btn-add-prop').click()
+    //Selects entries from the dropdown menus and adds them to the order.
 
     cy.get('#entries-input').type('1')
     
@@ -29,7 +31,7 @@ describe('Data generator test', () => {
     cy.get('#btn-arr-data').click()
     cy.get('#btn-download-data').click()
     
-    
+    //Selects 1 entry to generate and confirms the CSV download.
   })
 
   
